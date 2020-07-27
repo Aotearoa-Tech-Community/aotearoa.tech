@@ -1,5 +1,6 @@
+
 html {
-  font-family: sans-serif;
+  font-family: serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -7,6 +8,28 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  min-height: 100vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+body::after {
+  content: "";
+  background: url('/nz.svg') no-repeat center center;
+  min-height: 100vh;
+  background-size:cover;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;  
+  -webkit-filter: grayscale(1); /* Old WebKit */
+  filter: grayscale(1);
+}
+#logo {
+  vertical-align: middle;
 }
 article,
 aside,
